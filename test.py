@@ -125,9 +125,9 @@ async def on_raw_reaction_add(payload):
 #-----------------------------------------  	
 async def on_message(message):
     #check for bots
-    message.content = message.content.lower()
-    if message.author.bot:
-        return
+	message.content = message.content.lower()
+	if message.author.bot:
+		return
 
 	if message.content.startswith('!upvote'):
         await message.channel.send('sent')
